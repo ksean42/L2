@@ -6,7 +6,7 @@ import (
 	"github.com/beevik/ntp"
 )
 
-func main() {
+func Time() {
 	time, _ := ntp.Time("0.beevik-ntp.pool.ntp.org")
 	fmt.Println(time)
 }

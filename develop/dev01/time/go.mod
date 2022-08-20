@@ -1,4 +1,4 @@
-module github.com/ksean42/L2/tree/master/develop/dev01/time
+module github.com/ksean42/L2/develop/dev01/time
 
 go 1.18
 
