@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+// Time prints current time
 func Time() {
 	if time, err := ntp.Time("0.beevik-ntp.pool.ntp.org"); err != nil {
 		fmt.Println(time)
