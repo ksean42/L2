@@ -8,6 +8,7 @@ import (
 	"os"
 )
 
+// PrintUsage выводит usage
 func PrintUsage() {
 	fmt.Printf("Usage: [-k *num*] [-n] [-r] [-u] [-b] [-c] [filename]\n" +
 		"-k *num* is for sort by column number (delimeter is space by default)\n" +
@@ -18,6 +19,7 @@ func PrintUsage() {
 		"-c to check if data is sorted\n")
 }
 
+// ReadFile читает файл в массив строк
 func ReadFile(fileName string) *[]string {
 	var strings []string
 	file, err := os.Open(fileName)
@@ -34,17 +36,20 @@ func ReadFile(fileName string) *[]string {
 	return &strings
 }
 
+// Output вывод в файл
 func Output(strings []string) {
 	file, err := os.Create("sorted.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer file.Close()
+
 	for _, value := range strings {
 		fmt.Fprintln(file, value)
 	}
 }
 
+// ParseFlags парсит флаги
 func ParseFlags() ([]Operation, string) {
 	var (
 		k        int
@@ -69,7 +74,7 @@ func ParseFlags() ([]Operation, string) {
 	}
 	fileName = flag.Args()[0]
 	ops := make([]Operation, 0, 6)
-	if c {
+	if c { // если есть флаг с то остальные флаги игнорируются
 		ops = append(ops, &IsSorted{})
 		return ops, fileName
 	}

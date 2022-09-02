@@ -1,6 +1,6 @@
 package pkg
 
-// Интерфейс стратегии сортировки
+// Operation Интерфейс стратегии сортировки
 type Operation interface {
 	Exec(elems *[]string)
 }

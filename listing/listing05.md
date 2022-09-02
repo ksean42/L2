@@ -31,6 +31,7 @@ func main() {
 
 Ответ:
 ```
-...
-
+Будет выведено error. Т.к сравниваем тип *customError со значением nil с nil
+https://go.dev/doc/faq#nil_error
+https://go.dev/blog/laws-of-reflection
 ```

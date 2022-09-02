@@ -1,0 +1,8 @@
+clerk 4000
+director 9000
+director 9000
+employee 6000 a a sd g a
+employee 6000 a a sd g a                       
+guard december 3000
+manager january 5000
+peon 4500                            

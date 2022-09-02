@@ -7,6 +7,7 @@ import (
 	"os"
 )
 
+// ReadDict читает файл со словарем, записывает все в массив строк и возвращает
 func ReadDict() *[]string {
 	var dict []string
 	file, err := os.Open("dictionary.txt")
@@ -22,6 +23,8 @@ func ReadDict() *[]string {
 	}
 	return &dict
 }
+
+// PrintResult печать результатов
 func PrintResult(res map[string][]string) {
 	for k, v := range res {
 		fmt.Print(k, ": ")
