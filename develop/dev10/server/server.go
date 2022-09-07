@@ -2,7 +2,7 @@ package main
 
 import (
 	tel "github.com/reiver/go-telnet"
-	"time"
+	"log"
 )
 
 func main() {
@@ -11,15 +11,7 @@ func main() {
 
 	err := tel.ListenAndServe(":555", handler)
 	if nil != err {
-		panic(err)
+		log.Fatal(err)
 	}
 
-}
-
-func send() {
-	//conn := tel.
-	for {
-		time.Sleep(time.Second)
-
-	}
 }

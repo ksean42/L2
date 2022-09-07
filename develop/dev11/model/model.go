@@ -2,15 +2,17 @@ package model
 
 import "time"
 
+// Event структура события
 type Event struct {
-	UserId      int       `json:"user_id"`
+	UserID      int       `json:"user_id"`
 	Date        time.Time `json:"date"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 }
 
+// Request структура для считывания запроса
 type Request struct {
-	UserId      int    `json:"user_id"`
+	UserID      int    `json:"user_id"`
 	Date        string `json:"date"`
 	Title       string `json:"title"`
 	Description string `json:"description"`
